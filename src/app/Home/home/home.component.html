@@ -1,0 +1,120 @@
+<div>
+  <div class="search">
+    <input type="text" [(ngModel)]="searchText" placeholder="Search for products, brands and more....">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let pro of products | filter : searchText">
+      <div class="card mt-2" >
+        <img class="card-img-top image" src="{{pro.href}}" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{pro.name}}</h5>
+          <p class="card-text">{{pro.description}}</p>
+          <button type="button" class="btn btn-primary" (click)="view(pro.id)">View Product Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--<div class="card" style="width: 18rem;">
+    <img class="card-img-top img2" src="./assets/laptop.jpg" alt="Card image cap">
+    <div class="card-body" id="card-height">
+      <h5 class="card-title">{{products[index]?.name}}</h5>
+      <p class="card-text">{{products[index]?.description}}</p>
+      <a *ngIf="products" [routerLink]="['/proDetail',products[1]?.id]" class="btn btn-primary">View Product Details</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top img3" src="./assets/shoe.jpg" alt="Card image cap">
+    <div class="card-body" id="card-height">
+      <h5 class="card-title">{{products[2]?.name}}</h5>
+      <p class="card-text">{{products[2]?.description}}</p>
+      <a *ngIf="products" [routerLink]="['/proDetail',products[2]?.id]" class="btn btn-primary">View Product Details</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top img4" src="./assets/smart watch.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{products[3]?.name}}</h5>
+      <p class="card-text">{{products[3]?.description}}</p>
+      <a *ngIf="products" [routerLink]="['/proDetail',products[3]?.id]" class="btn btn-primary">View Product Details</a>
+    </div>
+  </div>
+
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top img5" src="./assets/hand_bag.jpg" alt="Card image cap">
+        <div class="card-body mb-5">
+          <h5 class="card-title">{{products[4]?.name}}</h5>
+          <p class="card-text">{{products[4]?.description}}</p>
+          <a *ngIf="products" [routerLink]="['/proDetail',products[4]?.id]" class="btn btn-primary">View Product Details</a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img6" src="./assets/hair dryer.jpg" alt="Card image cap">
+        <div class="card-body mb-5">
+          <h5 class="card-title">{{products[5]?.name}}</h5>
+          <p class="card-text">{{products[5]?.description}}</p>
+          <a *ngIf="products" [routerLink]="['/proDetail',products[5]?.id]" class="btn btn-primary">View Product Details</a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img7" src="./assets/suitcase.jpg" alt="Card image cap">
+        <div class="card-body mb-5">
+          <h5 class="card-title">{{products[6]?.name}}</h5>
+          <p class="card-text">{{products[6]?.description}}</p>
+          <a *ngIf="products" [routerLink]="['/proDetail',products[6]?.id]" class="btn btn-primary">View Product Details</a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img8" src="./assets/jewellery.jpg" alt="Card image cap">
+        <div class="card-body mb-5">
+          <h5 class="card-title">{{products[7]?.name}}</h5>
+          <p class="card-text">{{products[7]?.description}}</p>
+          <a *ngIf="products" [routerLink]="['/proDetail',products[7]?.id]" class="btn btn-primary">View Product Details</a>
+        </div>
+      </div>
+  
+  
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top img9" src="./assets/facewash.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{products[8]?.name}}</h5>
+              <p class="card-text">{{products[8]?.description}}</p>
+              <a *ngIf="products" [routerLink]="['/proDetail',products[8]?.id]" class="btn btn-primary">View Product Details</a>
+            </div>
+          </div>
+        
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top img10" src="./assets/goggle.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{products[9]?.name}}</h5>
+              <p class="card-text">{{products[9]?.description}}</p>
+              <a *ngIf="products" [routerLink]="['/proDetail',products[9]?.id]" class="btn btn-primary">View Product Details</a>
+            </div>
+          </div>
+        
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top img11" src="./assets/headphone.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{products[10]?.name}}</h5>
+              <p class="card-text">{{products[10]?.description}}</p>
+              <a *ngIf="products" [routerLink]="['/proDetail',products[10]?.id]" class="btn btn-primary">View Product Details</a>
+            </div>
+          </div>
+        
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top img12" src="./assets/pendrive.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{products[11]?.name}}</h5>
+              <p class="card-text">{{products[11]?.description}}</p>
+              <a *ngIf="products" [routerLink]="['/proDetail',products[11]?.id]" class="btn btn-primary">View Product Details</a>
+          </div>
+        </div>-->

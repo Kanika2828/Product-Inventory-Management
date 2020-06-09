@@ -1,0 +1,293 @@
+@media only screen and (min-width: 1401px){
+.row{
+    margin-top:2%;
+    margin-bottom: 5%;
+    margin-left:9%;
+    margin-right: 0px;
+}
+
+.card{
+    margin-right: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    width: 18.2rem;
+}
+
+.card-body{
+    height: 5rem;
+    margin-bottom: 5rem;
+}
+
+.image{
+    width: 18rem;
+    height: 12rem;
+}
+
+.search{
+    margin-left: 29.4%;
+    margin-top: 2%;
+    width: 42%;
+    height:30px;
+    border-radius: 50px;
+    border: 1px solid gray;
+}
+
+input[type="text"]{
+    padding-left:1%;
+    border:none;
+    outline: none;
+    width: 94%;
+    margin-left: 1.5%;
+}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px){
+    .row{
+        margin-top:2%;
+        margin-bottom: 5%;
+        margin-left:6%;
+        margin-right: 0px;
+    }
+    
+    .card{
+        margin-right: 2rem;
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+        width: 17.2rem;
+    }
+    
+    .card-body{
+        height: 5rem;
+        margin-bottom: 5rem;
+    }
+    
+    .image{
+        width: 17rem;
+        height: 12rem;
+    }
+    
+    .search{
+        margin-left: 20%;
+        margin-top: 4%;
+        width: 60%;
+        height:30px;
+        border: 1px solid gray;
+    }
+    
+    input[type="text"]{
+        padding-left:1%;
+        border:none;
+        outline: none;
+        width: 94%;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 767px){
+    .search{
+        margin-left: 9%;
+        margin-top: 2%;
+        width: 80%;
+        height:30px;
+        border: 1px solid gray;
+    }
+
+    input[type="text"]{
+        padding-left:1%;
+        border:none;
+        outline: none;
+        width: 92%;
+        margin-left: 1.5%;
+    }
+
+    .row{
+        margin-top:5%;
+        margin-bottom: 5%;
+        margin-left:14%;
+        margin-right: 0px;
+    }
+
+    .card{
+        width: 18.2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .row{
+        margin-top:2%;
+        margin-bottom: 5%;
+        margin-left:10%;
+        margin-right: 0px;
+    }
+
+    .search{
+        margin-left: 10%;
+        margin-top: 2%;
+        width: 80%;
+        height:30px;
+        border: 1px solid gray;
+    }
+
+    input[type="text"]{
+        padding-left:1%;
+        border:none;
+        outline: none;
+        width: 96%;
+    }
+
+    .card{
+    margin-right: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    width: 18.2rem;
+}
+
+.card-body{
+    height: 5rem;
+    margin-bottom: 5rem;
+}
+
+.image{
+    width: 16rem;
+    height: 12rem;
+}
+}
+
+@media only screen and (min-width: 360px) and (max-width: 400px){
+    .search{
+        margin-left: 9%;
+        margin-top: 4%;
+        width: 81%;
+        height:30px;
+        border: 1px solid gray;
+    }
+
+    input[type="text"]{
+        padding-left:1%;
+        border:none;
+        outline: none;
+        width: 92%;
+    }
+
+    .row{
+        margin-top:5%;
+        margin-bottom: 5%;
+        margin-left:9%;
+        margin-right: 0px;
+    }
+
+    .card{
+        width: 18.2rem;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 359px){
+    .search{
+        margin-left: 9%;
+        margin-top: 4%;
+        width: 83%;
+        height:30px;
+        border: 1px solid gray;
+    }
+
+    input[type="text"]{
+        padding-left:1%;
+        border:none;
+        outline: none;
+        width: 90%;
+    }
+
+    .row{
+        margin-top:5%;
+        margin-bottom: 5%;
+        margin-left:9%;
+        margin-right: 0px;
+    }
+
+    .card{
+        width: 16.5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) and (min-width:414px){
+    .search{
+        margin-left: 9%;
+        margin-top: 4%;
+        width: 82%;
+        height:30px;
+        border: 1px solid gray;
+    }
+
+    input[type="text"]{
+        padding-left:1%;
+        border:none;
+        outline: none;
+        width: 90%;
+    }
+
+    .row{
+        margin-top:5%;
+        margin-bottom: 5%;
+        margin-left:9%;
+        margin-right: 0px;
+    }
+
+    .card{
+        width: 21rem;
+    }
+}
+
+@media only screen and (min-width: 411px) and (max-width:413px){
+    .search{
+        margin-left: 13%;
+        margin-top: 4%;
+        width: 75%;
+        height:30px;
+        border: 1px solid gray;
+    }
+
+    input[type="text"]{
+        padding-left:1%;
+        border:none;
+        outline: none;
+        width: 90%;
+    }
+
+    .row{
+        margin-top:5%;
+        margin-bottom: 5%;
+        margin-left:13%;
+        margin-right: 0px;
+    }
+
+    .card{
+        width: 19.2rem;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width:410px){
+    .search{
+        margin-left: 11%;
+        margin-top: 4%;
+        width: 78%;
+        height:30px;
+        border: 1px solid gray;
+    }
+
+    input[type="text"]{
+        padding-left:1%;
+        border:none;
+        outline: none;
+        width: 90%;
+    }
+
+    .row{
+        margin-top:5%;
+        margin-bottom: 5%;
+        margin-left:11%;
+        margin-right: 0px;
+    }
+
+    .card{
+        width: 18.2rem;
+    }
+}
