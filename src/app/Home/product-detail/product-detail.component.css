@@ -1,0 +1,63 @@
+.row{
+    margin-left:5%;
+    margin-right: 0px;
+}
+
+.col-lg-9{
+    margin-top: 3%;
+}
+
+.col-lg-3{
+    margin-top: 3%;
+    padding-right: 3%;
+}
+
+.card{
+    width: 18rem;
+}
+
+h5,h6{
+    text-decoration: underline;
+}
+
+.orange{
+    background-color: #ffad33;
+}
+
+.bttn{
+    margin-top: 5%;
+    width: 30%;
+    margin-right: 3%;
+}
+
+.butn{
+    margin-top: 2%;
+    width: 25%;
+    margin-right: 3%;
+}
+
+.price{
+    color:#cc3300;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px){
+    .butn{
+        margin-top: 2%;
+        width: 44%;
+        margin-right: 3%;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1050px){
+    .card{
+        width: 14rem;
+    }
+
+    .bttn{
+        margin-top: 5%;
+        width: 40%;
+        margin-right: 3%;
+    }
+}
+

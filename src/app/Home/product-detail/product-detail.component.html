@@ -1,0 +1,350 @@
+<div class="row">
+    <div class="col-lg-3">
+      <div class="card">
+        <img class="card-img-top img1" src="{{productData?.href}}" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{productData?.name}}</h5>
+          <p class="card-text">{{productData?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>{{title}}</h4>
+      <div *ngFor="let data of productData?.details">
+        <ul>
+          <li>{{data.text}}</li>
+        </ul>
+      </div>
+        <ul>
+          <li><h6>Manufactured By: {{productData?.manufacturer}}</h6></li>
+        </ul>
+      <h5 class="price">Price: Rs.{{productData?.price}}</h5>
+      <a class="btn btn-warning butn">Buy Now</a>
+      <a class="btn btn-info butn" (click)="addToCart(product)">Add to cart</a>
+    </div>
+  </div>
+
+<!-- <div *ngIf="isShow2">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img1" src="./assets/laptop.jpg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[1]?.name}}</h5>
+          <p class="card-text">{{products[1]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Xiaomi has provided a 15.6-inch full-HD (1920x1080 pixels) anti-glare display on the new Mi Gaming Laptop.</li>
+        <li>The display panel has 142ppi of pixel density, 72 percent NTSC colour gamut, 178-degree of wide viewing angle, and 300 nits of brightness.</li>
+        <li>There is also the 144Hz of refresh rate and 9.9mm thick bezels.</li>
+        <li>Above the display panel, the Mi Gaming Laptop 2019 has a webcam that enables HD video calling and is equipped alongside a digital array of microphones.</li>
+        <li>Gamers have also provided with two 3W speakers that support Dolby surround sound technology and Hi-Res Audio standard.</li>
+        <li>Xiaomi has provided its in-house thermal management system on the new Mi Gaming Laptop model that is touted to increase its cooling efficiency by 60 percent.</li>
+        <li>The company claims that it has used 3+2 large-diametre heat pipe along with S-shaped turbine metal blades and a 12v drive motor to release heat quickly.</li>
+        <li>For typing, the Mi Gaming Laptop 2019 has the four-partition backlit keyboard with 1.8mm keystroke.</li>
+        <li>The keyboard includes five programmable buttons and has a 30-key anti-collision design.</li> 
+        <li>Furthermore, There is a glass touchpad that supports multi-finger gestures -- backed by Microsoft PTP clickpad technology.</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>   
+<div *ngIf="isShow3">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img1" src="./assets/shoe.jpg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[2]?.name}}</h5>
+          <p class="card-text">{{products[2]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Nike has unveiled its first self-lacing smart basketball shoe.</li>
+        <li>The Adapt BB, priced at $350, does more than just lace itself. Using a power lacing system called Fit Adapt, users can adjust to find the perfect fit using the Nike Adapt mobile app.</li>
+        <li>Boston Celtics star Jayson Tatum will wear the Adapt BB in the shoe’s professional debut Wednesday night when the Celtics play the Toronto Raptors.</li>
+        <li>Customization is another key feature of the Adapt BB.</li> 
+        <li>The two buttons at the bottom of the shoe light up in the color of your choice while programming them, a feature that Tatum finds particularly interesting.</li>
+        <li>A smart shoe comes new responsibilities — like having to charge the shoes every 10-14 days via a charging pad that comes with the shoes.</li>
+        <li>While the shoes work without a phone (you can adjust using the buttons), a smartphone is required to get that perfect fit and customization.</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShow4">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img1" src="./assets/smart watch.jpeg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[3]?.name}}</h5>
+          <p class="card-text">{{products[3]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Phone with Camera & SIM Card Support Apps like Facebook, Whatsapp, QQ, WeChat, Twitter, Time Schedule, Read Message or News, Sports, Health, Pedometer, Sedentary Remind & Sleep Microphone, Touch Screen, Multi-Language.</li>
+        <li>Supported Function: Bluetooth Dialer, Pedometer, Sleep monitor, Sedentary Reminder, Music Player, Alarm Clock, Watch, Camera, Remote camera, Bluetooth SMS/IM Message Notifier, Message Reminder, Call Reminder, Answer Call.</li>
+        <li>Dial Call Phone function: Make phone call directly from the smart watch, including answering and dial-up.SIM slot, support make calls by Bluetooth or smart watch.</li> 
+        <li>Sync function: QQ, Wechat, Twitter, Facebook; time, schedule, read message or news.</li>
+        <li>MP3,MP4,Camera.</li>
+        <li>SYNC FUNCTION- With your Android device, Sync call log, contacts, SMS, and also sync the notifications such as Twitter, Facebook and Instagram etc.</li>
+        <li>PHONE FUNCTION-- Make phone call directly from the smart watch, including answering and dial-up. SIM slot, support make calls by Bluetooth or smart watch.</li>
+        <li>FITNESS MANAGER- Pedometer, sleep monitoring and sedentary reminder track your steps, calories you burn, record your sleeping condition and remind of you how long you have sit.</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShow5">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top img1" src="./assets/hand_bag.jpg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[4]?.name}}</h5>
+          <p class="card-text">{{products[4]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Paneling-inspired design complete the stylish exterior of this case.</li>
+        <li>Extra large pockets allow you to store all your necessities inside at once.</li>        <li>Woven stitched frame ensures this bag will last while still looking great.</li>
+        <li>Satchel strap allows bag to turn into a messenger satchel bag at a moments notice</li>
+        <li>Vivid colors create a professional yet stylish finish</li>
+        <li>Modern yet classy for the business woman inside of you, keep all your essentials close by inside our new VanGoddy Pallia Women's Satchel Handbag.</li>
+        <li>Designed to securely fit all your necessities comfortably inside, you’ll never need another handbag again.</li>
+        <li>With a paneling inspired design and a woven stitched frame, this handbag is the perfect companion for any occasion.</li>
+        <li>With multiple pockets to store everything you’ll ever need, you’ll never feel like you’re missing anything with this bag around.</li>
+        <li>Included is our satchel strap which turns this bag from a handbag to a messenger satchel bag for any situation.</li>
+        <li>Finally, with a nylon padded interior, a scratch free interior is almost guaranteed.</li>
+        <li>Stylish and professional with a slim silhouette, the handbag goes great with any attire you might have on.</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShow6">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top img1" src="./assets/hair dryer.jpg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[5]?.name}}</h5>
+          <p class="card-text">{{products[5]?.description}}</p>
+        </div>
+        <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+        <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+      </div>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Advanced concentrator technology with quick-heat head.</li>
+        <li>Thermo protect temperature setting: The ThermoProtect temperature provides the optimal drying temperature and gives additional protection from overheating the hair.</li>
+        <li>Not cordless, 1.5-meter power cord.</li>
+        <li>Compact design for easy handling; easy storage hook for convenient storage.</li>
+        <li>Note : Product is HOT AIR dryer , 2 Flexible Heat Setting for careful drying.</li>
+        <li>1000 watts and 2 years Philips India warranty from the date of purchase.</li>
+        <li>There are two settings for drying speed (low, high); the motor speed is regulated to cater to these settings perfectly. There will not be any issue on fan speeds at low, high settings</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShow7">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img1" src="./assets/suitcase.jpg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[6]?.name}}</h5>
+          <p class="card-text">{{products[6]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Wide U-shaped opening for main compartment</li>
+        <li>Additional front pocket for go-to items</li>
+        <li>Detachable and adjustable shoulder strap</li>
+        <li>Bottom lugs for protection</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShow8">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img1" src="./assets/jewellery.jpg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[7]?.name}}</h5>
+          <p class="card-text">{{products[7]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Apsara art is a branded Jewellery having all vast range of varieties dealing in jewellery for womens earrings women Ethnic Antique traditional polki Chuda bangles woman ring rings necklace bracelets girl earings mangalsutra latest stylish ear bridal sets Wedding kundans bracelet girlfriend Set For Women Kundan Sets jadau</li>
+        <li>Exclusive Silver Plated Designer Traditional Necklace Set Stylish Latest Jhumka Earrings with sets</li>
+        <li>Trend Designs- Temple Jewellery South Indian Traditional Jewelry Women Necklace Polki Ethnic necklaces with earing Designer Set Silver sets Ear rings</li>
+        <li>Colour- Red Green Stones Plating- Silver Oxodised Copper Neckless Sets with Earings for girls women</li>
+        <li>Occasion:-Daily Wear,Party Wear,Valentine Gifts for Girlfriend Wife Lovers Birthday Anniversary Wedding Gifts For Some One You Love</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShow9">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img1" src="./assets/facewash.jpg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[8]?.name}}</h5>
+          <p class="card-text">{{products[8]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Effectively cleanses your skin while replenishing moisture deep down for beautiful conditioned skin.</li>
+        <li>For moisturized & soft skin.</li>
+        <li>Contains nutrium moisture, a nourishing beauty serum that replenishes the skin from deep within giving it a beautiful bounce.</li>
+        <li>Enriched with NutriumMoisture Beauty Serum* to nourish your skin deeply**</li>
+        <li>With natural white floral fragrance, help you clean face in a pleasant mood</li>
+        <li>For normal, sensitive or dry skin</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShow10">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top img1" src="./assets/goggle.jpg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[9]?.name}}</h5>
+          <p class="card-text">{{products[9]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>POLARIZED LENS - Polarized sunglasses reduce glare reflected off of roads bodies of water snow and other horizontal surfaces. Restore true color eliminate reflected light and scattered light and protect eyes perfectly. Polarized sunglasses cut glare and haze so your eyes are more comfortable and you can see better.</li>
+        <li>Newest DesignIt is Suitable For Any Face Show Your Unique And High-end Taste.</li>
+        <li>Suitable- Houseboat Driving Running FishingRacing Skiing and Climbing Trekking and Business Or Other Outdoor Activities Enthusiasts.</li>
+        <li>Color: Black-Black Silver-Gray Gold-Gray Silver-White Gold-Gold Silver-Blue Gold-Green Gold-Colorful Gold-Pink Gold-Blue Gold-Purple Silver-Green Gold-Red Black-White Gold-Green Silver-Brown Gray-Gray Gold-Green Gray-Green Gold</li>
+        <li>Size: 130*137*50mm</li>
+        <li>Package included: 1 x Sunglasses</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShow11">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top img1" src="./assets/headphone.jpeg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[10]?.name}}</h5>
+          <p class="card-text">{{products[10]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Bluetooth connectivity, Playing time: Up to 8 hours, Standby time: About 100 hours</li>
+        <li>Compatible with all mobiles, laptops and tablets</li>
+        <li>Noise cancelling microphone, Operation Range: 10 meters</li>
+        <li>1 year Manufacturer warranty</li>
+        <li>Super bass, HD clarity, 40mm drivers, Battery type: Rechargeable 250mAh Li-polymer battery</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShow12">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top img1" src="./assets/pendrive.jpg" alt="Card image cap">
+        <div class="card-body" id="card-height">
+          <h5 class="card-title">{{products[11]?.name}}</h5>
+          <p class="card-text">{{products[11]?.description}}</p>
+        </div>
+      </div>
+      <a routerLink="./editPro" routerLinkActive="active" class="btn btn-success bttn">Edit</a>
+      <a routerLink="./deletePro" routerLinkActive="active" class="btn btn-danger bttn">Delete</a>
+    </div>
+    <div class="col-lg-9">
+      <h4>Features and more details</h4>
+      <ul>
+        <li>Small sized and lightweight</li>
+        <li>Data protection software</li>
+        <li>Use for: PCs</li>
+        <li>Practical and portable</li>
+        <li>Storage made safer</li>
+        <li>Small in size, big in storage</li>
+        <li>Quality you can trust</li>
+        <li>Hi-speed USB 2.0 compatible</li>
+        <li>Bus powered from USB port</li>
+        <li>System requirements - USB Interface (Type A) with Windows 7, Windows 8.1, Windows 10 or Mac OS 10.6.6 and beyond</li>
+      </ul>
+      <a class="btn btn-warning">Buy Now</a>
+      <a class="btn orange">Add to cart</a>
+    </div> 
+  </div>
+</div> -->
+
