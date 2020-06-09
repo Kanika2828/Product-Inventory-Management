@@ -1,0 +1,15 @@
+<div style="height: 50%">
+    <h2>TOP 5 PRODUCTS</h2>
+    <canvas
+        baseChart
+        height="450"
+        width="1400px"
+        [chartType]="'pie'"
+        [datasets]="pieChartData"
+        [labels]="pieChartLabels"
+        [options]="pieChartOptions"
+        [legend]="true"
+        [colors]="pieChartColor"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+  </div>
