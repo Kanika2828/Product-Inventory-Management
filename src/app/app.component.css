@@ -1,0 +1,109 @@
+ul, li, a{
+    color: white;
+}
+
+.dropdown-item{
+    color: black;
+}
+
+.right{
+    width:28%;
+    padding-left: 1%;
+}
+
+li{
+    font-size: 17px;
+}
+
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.icon{
+    padding-top:8px;
+}
+
+span{
+    font-size: 14px;
+    font-weight: 900;
+    position: absolute;
+    border-radius: 70%;
+    height: 20px;
+    width: 22px;
+    background: yellowgreen;
+    color: white;
+    padding-left: 4px;
+}
+
+nav{
+    padding-right: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 15px;
+}
+
+img{
+    width: 30%;
+    height: 50px
+}
+
+.nav-item :hover{
+    background-color: yellowgreen;
+}
+
+li :not(.dropdown-item) :hover{
+    background-color: yellowgreen;
+}
+
+@media only screen and (min-width: 400px) and (max-width:500px){
+    nav{
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+
+    li, a{
+        padding-left:10px;
+    }
+
+    button{
+        margin-right: 5px;
+    }
+}
+
+
+@media only screen and (min-width: 1400px){
+    img{
+        width: 8%;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    img{
+        width: 20%;
+        height: 50px;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+    .img{
+        width: 20%;
+        height: 50px;
+    }
+
+    nav{
+        padding-left: 15px;
+        padding-right: 100px;
+    }
+}
+
+@media only screen and (min-width: 411px) and (max-width: 823px){
+    .dropdown-menu{
+        min-width: 12.5rem;
+    }
+}
+
